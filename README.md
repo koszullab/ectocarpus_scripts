@@ -1,6 +1,6 @@
 # *Ectocarpus sp*. scaffolding project
 
-<img src="images/matrix_evolution.gif" alt="Hi-C contact map evolution" title="Hi-C contact map evolution through instaGRAAL scaffolding cycles" width="500"/>
+<img src="images/matrix_evolution.gif" alt="Hi-C contact map evolution" title="Hi-C contact map evolution through instaGRAAL scaffolding cycles" width="500" style="display: block; margin-left: auto; margin-right: auto;" />
 
 This repo contains instructions on how to reproduce the main results and figures of our [instaGRAAL](https://github.com/koszullab/instaGRAAL) showcase paper on the Hi-C based scaffolding of the *Ectocarpus sp.* genome. Since we realize some of the steps can take time to run, we also provide intermediate data (such as the initial contact maps).
 
@@ -93,9 +93,9 @@ and from BUSCO (replacing paths accordingly):
 for genome in data/genomes/*.fa; do python /path/to/run_BUSCO.py -i $genome -o $(basename ${genome%.fa}) -l /path/to/eukaryota_odb9 -m genome -c 8 --long; done
 ```
 
-Putting together the results (with the help of BUSCO's ```generate_plots.py```) should show something like this
+Putting together the results (with the help of BUSCO's ```generate_plot.py```) should show something like this:
 
-<img src="images/busco_figure.png" alt="BUSCO completeness" title="BUSCO completeness for all four assemblies" width="500"/>
+<img src="images/busco_figure.png" alt="BUSCO completeness" title="BUSCO completeness for all four assemblies" width="500" style="display: block; margin-left: auto; margin-right: auto;" />
 
 ## Generating post-scaffolding contact maps
 
