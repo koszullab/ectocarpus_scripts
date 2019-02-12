@@ -90,10 +90,22 @@ In order to get main stats from [LG-QUAST](https://github.com/ablabl/quast), ins
 and from BUSCO (replacing paths accordingly):
 
 ```sh
-for genome in data/genomes/*.fa; do python /path/to/run_BUSCO.py -i $genome -o $(basename ${genome%.fa}) -l /path/to/eukaryota_odb9 -m genome -c 8 --long; done
+mkdir -p busco
+for genome in data/genomes/*.fa; do 
+  python /path/to/run_BUSCO.py -i $genome -o "busco/$(basename ${genome%.fa})" -l /path/to/eukaryota_odb9 -m genome -c 8 --long
+done
 ```
 
-Putting together the results (with the help of BUSCO's ```generate_plot.py```) should show something like this:
+You may then put together the results with the help of BUSCO's ```generate_plot.py```:
+
+```sh
+for genome in data/genomes/*.fa; do
+  mv "busco/$(basename ${genome%.fa})/short_summary*.txt" busco
+done
+python /path/to/generate_plot.py -wd busco
+```
+
+This should produce a figure as well as an R script resembling the present ```busco_figure.R``` file. The final output should look like this (modulo a few cosmetic changes):
 
 <img src="images/busco_figure.png" alt="BUSCO completeness" title="BUSCO completeness for all four assemblies" width="500" style="display: block; margin-left: auto; margin-right: auto;" />
 
