@@ -1,0 +1,4 @@
+desma_*.gz filter=lfs diff=lfs merge=lfs -text
+desma_reference_genome.fa.gz filter=lfs diff=lfs merge=lfs -text
+desma_polished_assembly.fa.gz filter=lfs diff=lfs merge=lfs -text
+desma_raw_graal.fa.gz filter=lfs diff=lfs merge=lfs -text
