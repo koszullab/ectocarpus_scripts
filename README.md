@@ -2,7 +2,9 @@
 
 <img src="images/matrix_evolution.gif" alt="Hi-C contact map evolution" title="Hi-C contact map evolution through instaGRAAL scaffolding cycles" width="500" style="display: block; margin-left: auto; margin-right: auto;" />
 
-This repo contains instructions on how to reproduce the main results and figures of our [instaGRAAL](https://github.com/koszullab/instaGRAAL) showcase paper on the Hi-C based scaffolding of the *Ectocarpus sp.* genome. Since we realize some of the steps can take time to run, we also provide intermediate data (such as the initial contact maps).
+[![DOI](https://zenodo.org/badge/180142272.svg)](https://zenodo.org/badge/latestdoi/180142272)
+
+This repo contains instructions on how to reproduce the main results and figures of our [instaGRAAL](https://github.com/koszullab/instaGRAAL) showcase [paper](https://www.biorxiv.org/content/10.1101/2019.12.22.882084v1.full) on the Hi-C based scaffolding of the *Ectocarpus sp.* genome. Since we realize some of the steps can take time to run, we also provide intermediate data (such as the initial contact maps).
 
 ## Getting the data
 
